@@ -1,9 +1,10 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
+    base: '/tiagomartinez/',
     build: {
-        target: 'esnext', // needed for native ES module workers
-        outDir: '../dist', // Output folder for the build files
+        target: 'esnext',
+        outDir: '../dist',
         emptyOutDir: true,
         rollupOptions: {
             input: {
@@ -11,10 +12,9 @@ export default defineConfig({
                 world: './public/world.html',
             }
         }
-
     },
-    root: 'public', // Change the root to the 'public' folder
+    root: 'public',
     server: {
-        open: true, // Automatically open the browser
+        open: true,
     }
 });
